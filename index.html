@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello, world</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #000;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello, world!<span id='underscore'>_</span></h1>
+    <script type="text/javascript">
+      var el = document.getElementById('underscore'),
+          is_visible = true;
+      setInterval(
+        function() {
+          if (is_visible) {
+            is_visible = false;
+            el.style.visibility = 'hidden';
+          }
+          else {
+            is_visible = true;
+            el.style.visibility = 'visible';
+          }
+        },
+        500
+      )
+    </script>
+  </body>
+</html>
